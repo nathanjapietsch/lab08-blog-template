@@ -26,6 +26,19 @@ class PostNew extends React.Component {
       });
     };
 
+    if(this.state.editing) {
+      // Render component for editing the post
+      return (
+        <PostEdit
+          post={this.props.post}
+          onSave={createPost}
+          onCancel={closeEdit}
+        />
+      );
+    }
+
+
+
     // TODO Section 7: Write code to switch to edit mode when editing is clicked
 
     return (
